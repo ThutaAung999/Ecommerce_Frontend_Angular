@@ -6,6 +6,82 @@
       "author": "typicode"
     }
   ],
+
+  "products": [
+    {
+      "productId": 1,
+      "productName": "Party wear shirt",
+      "categoryId": 1,
+      "description": "descriptoin first for shirt",
+      "price": 9.6,
+      "is_available":true,
+      "productImg": "http://localhost:4200/assets/s1.jpg",
+      "rating": 4,
+      "review": 150,
+      "vender_name": "AAA shop",
+      "waranty": 1
+    },
+    {
+      "productId": 2,
+      "productName": "Casual Shirt",
+      "categoryId": 2,
+      "description": "descriptoin second for shirt ",
+      "price": 4.49,
+      "is_available":true,
+      "productImg": "http://localhost:4200/assets/s2.jfif",
+      "rating": 3,
+      "review": 120,
+      "vender_name": "ABC shop",
+      "waranty": 1
+    },
+    {
+      "productId": 3,
+      "productName": "Formal shirt",
+      "categoryId": 2,
+      "description": "descriptoin third for shirt ",
+      "price": 12.5,
+      "is_available":true,
+      "productImg": "http://localhost:4200/assets/s3.jfif",
+      "rating": 1,
+      "review": 100,
+      "vender_name": "OPJ shop",
+      "waranty": 1
+    },
+    {
+    "productId": 4,
+    "productName": "Formal shirt",
+    "categoryId": 3,
+    "description": "descriptoin four for shirt ",
+    "price": 7.69,
+    "is_available":true,
+      "productImg": "http://localhost:4200/assets/s4.jpg",
+    "rating": 1,
+    "review": 100,
+    "vender_name": "OPJ shop",
+    "waranty": 1
+    },
+    {
+    "productId": 5,
+    "productName": "Formal shirt",
+      "categoryId": 5,
+    "description": "descriptoin fiive for shirt ",
+    "price": 8.5,
+    "is_available":true,
+      "productImg": "http://localhost:4200/assets/s5.jpg",
+    "rating": 1,
+    "review": 100,
+    "vender_name": "OPJ shop",
+    "waranty": 1
+    }
+  ],
+  "categories":[
+    {"id": 1,"categoryName": "Electronics"},
+    {"id": 2,"categoryName": "Men"},
+    {"id": 3,"categoryName": "Women"},
+    {"id": 4,"categoryName": "Homes and Furnituries"},
+    {"id": 5,"categoryName": "Baby & Kids"},
+    {"id": 6,"categoryName": "Computer & acceorities"}
+  ],
   "comments": [
     {
       "id": 1,

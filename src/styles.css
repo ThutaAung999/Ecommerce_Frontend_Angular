@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.block {
+  color: white;
+  align-content: center;
+  padding:5%;
+
+}
+
+.block-1{
+  background-color:#324376;
+}
+
+.block-2{
+  background-color: #586ba4;
+}
+
+.block-3{
+  background-color: #f76c5e;
+}
+
+.full-page{
+  height: 100vh;
+
+}
+
+.carousel-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  background-size: cover;
+}
+
+
+.carousel-placeholder-1{
+  background-color: #f7605e;
+}
+
+.carousel-placeholder-2{
+  background-color: #03965d;
+}
+
+
+.carousel-placeholder-3{
+  background-color: #586ba4;
+}
+
+.carousel-item{
+  height:50vh;
+}
+
+#featured-products-carousel{
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+@media   (min-width:700px){
+
+  .block-2{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .first-order-responsive{
+    order:1;
+  }
+
+  .second-order-responsive{
+    order:2;
+  }
+
+}
+
+
+
+.display-5 {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-5 {
+    font-size: 3rem;
+  }
+}

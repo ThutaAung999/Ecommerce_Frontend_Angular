@@ -1,1 +1,38 @@
-<p>view-product-by-category works!</p>
+<h2>Showing Result By Category</h2>
+<div class="container px-4 px-lg-5 mt-5">
+  <div class="row gx-4 gx-lg-5
+                row-cols-1
+                row-cols-md-2
+                row-cols-xl-3
+                justify-content-center"
+  >
+
+    <div class="mb-5" *ngFor="let products of productList">
+      <div class="card h-100">
+        <!-- Product image-->
+        <img class="card-img-top h-50"   src="{{products.productImg}}" alt="..." />
+        <!-- Product details-->
+        <div class="card-body p-4" >
+          <div class="text-center">
+            <!-- Product name-->
+            <a routerLink="/products/view-product/{{products.productId}}" class="text-decoration-none">
+              <h6 class="fw-bolder">
+                {{products.productName}}
+              </h6>
+            </a>
+            <!-- Product price-->
+            $-{{products.price}}
+          </div>
+          <p  class="card-text ">{{products.description}}</p>
+        </div>
+        <!-- Product actions-->
+        <div class="card-footer p-4 py-2 border-top-0 ">
+          <!--          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>-->
+          <small class="text-muted">{{products.rating}} stars</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
