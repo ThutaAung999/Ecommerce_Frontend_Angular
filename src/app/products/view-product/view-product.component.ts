@@ -9,26 +9,30 @@ import {ProductService} from "../product.service";
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent implements OnInit{
+  productId!:string;
+  productData = {} as Product;
+  //productData !:Product;
 
-  productId=0;
-  productData!:Product;
-
-  constructor(private activatedRoute: ActivatedRoute ,
-              private productService:ProductService){
+  constructor(private activatedRoute: ActivatedRoute,
+              private productService:ProductService) {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(data=>{
-      this.productId=data['id'];
-      console.log(' this.productId :',this.productId)
-    });
+    console.log('ngOnInit   in view product by id ')
+    this.activatedRoute.params.subscribe(data=> {
+      //this.productId=data['id'];
+      this.productId = data.id;
+      console.log(' this.productId :', this.productId)//OK
+      })
 
-   this.productService.viewProductById(this.productId).subscribe(prod=>{
-     this.productData=prod;
+      this.productService.viewProductById(this.productId).subscribe(prod=>{
+        console.log('prod:',prod)//OK
+        console.log('prod.productName::::::',prod.productName)//undefined
 
-     console.log('this.productData :',this.productData)
-     console.log('this.productData.productName :',this.productData['productName'])
-   })
+        this.productData=prod;
+
+        console.log('this.productData :',this.productData.productName)
+        console.log('this.productData.productName :',(this.productData.productName))//undefined
+      },error=>console.log("Error  :" , error))
   }
-
 }

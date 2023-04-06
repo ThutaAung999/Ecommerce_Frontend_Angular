@@ -9,10 +9,12 @@ import {ViewProductByCategoryComponent} from "./view-product-by-category/view-pr
 import {ViewProductByDateComponent} from "./view-product-by-date/view-product-by-date.component";
 import {UpdateProductComponent} from "./update-product/update-product.component";
 
+
 const routes: Routes = [
 
 
-    /*
+    /*This is also  work
+
 { path: '', component: ViewAllProductComponent ,
     children: [
       { path: 'add-product', component: AddProductComponent },
@@ -32,6 +34,7 @@ const routes: Routes = [
   { path: 'search-date', component: ViewProductByDateComponent },
   { path: 'delete-product/:id', component: DeleteProductComponent },
   {path:'view-product/:id',component: ViewProductComponent},
+
   {path:'update-product/:id',component: UpdateProductComponent},
   ];
 

@@ -16,15 +16,15 @@ export class ViewProductByCategoryComponent implements OnInit{
   productList:Array<Product>=[];
 
   //product!:Product;
-
+  product={} as Product;
 //  searchCategory1!:Category;
-
 
   constructor(private activatedRoute:ActivatedRoute,
               private productService:ProductService){
   }
 
   ngOnInit(): void {
+    console.log('ngOnInit   in view product by category ')
     /*this.activatedRoute.queryParams.subscribe(category=> {*/
     //difference  between  params  and queryParam in Angular
     this.activatedRoute.params.subscribe(category=> {
@@ -37,7 +37,7 @@ export class ViewProductByCategoryComponent implements OnInit{
 
       //this.productService.searchCategoryProduct(this.searchCategory1)
       this.productService.searchCategoryProduct(this.searchCategory)
-                                                      .subscribe(categoryData => {
+                                                      .subscribe(categoryData=> {
           this.productList = categoryData;
           //this.product=categoryData;
           console.log(this.productList)

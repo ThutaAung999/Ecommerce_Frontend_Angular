@@ -12,6 +12,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 
+
+
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -21,7 +23,9 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
     ViewAllProductComponent,
     ViewProductComponent,
     UpdateProductComponent,
-    DeleteProductComponent
+    DeleteProductComponent,
+
+
   ],
   imports: [
     CommonModule,

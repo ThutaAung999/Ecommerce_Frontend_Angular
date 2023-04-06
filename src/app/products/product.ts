@@ -9,7 +9,7 @@ export interface Product {
   isAvailable:boolean;
   //color:string;
   review:number;
-  vendorName:string;
+  venderName:string;
   waranty:number;
 
 }
