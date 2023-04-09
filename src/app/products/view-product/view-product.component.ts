@@ -22,15 +22,12 @@ export class ViewProductComponent implements OnInit{
 
   ngOnInit(): void {
 
-
     console.log('ngOnInit   in view product by id ')
 
     this.activatedRoute.params.subscribe(data=> {
       //this.productId=data['id'];
       this.productId = data.id;
       console.log(' this.productId :', this.productId)//OK
-
-
 
       this.productService.viewProductById(this.productId).subscribe((prod:Product)=>{
         console.log('prod:',prod)//OK
@@ -42,7 +39,5 @@ export class ViewProductComponent implements OnInit{
         console.log('this.productData.productName :',(this.productData.productName))//undefined
       })
       })
-
-
   }
 }

@@ -6,7 +6,6 @@
       "author": "typicode"
     }
   ],
-
   "products": [
     {
       "id": "1",
@@ -14,7 +13,7 @@
       "categoryId": 1,
       "description": "descriptoin first for shirt",
       "price": 9.6,
-      "isAvailable":true,
+      "isAvailable": true,
       "productImg": "http://localhost:4200/assets/s1.jpg",
       "rating": 4,
       "review": 150,
@@ -27,7 +26,7 @@
       "categoryId": 2,
       "description": "descriptoin second for shirt ",
       "price": 4.49,
-      "isAvailable":true,
+      "isAvailable": true,
       "productImg": "http://localhost:4200/assets/s2.jfif",
       "rating": 3,
       "review": 120,
@@ -40,7 +39,7 @@
       "categoryId": 2,
       "description": "descriptoin third for shirt ",
       "price": 12.5,
-      "isAvailable":true,
+      "isAvailable": true,
       "productImg": "http://localhost:4200/assets/s3.jfif",
       "rating": 1,
       "review": 100,
@@ -48,39 +47,80 @@
       "waranty": 1
     },
     {
-    "id": "4",
-    "productName": "Formal shirt",
-    "categoryId": 3,
-    "description": "descriptoin four for shirt ",
-    "price": 7.69,
-    "isAvailable":true,
+      "id": "4",
+      "productName": "Formal shirt",
+      "categoryId": 3,
+      "description": "descriptoin four for shirt ",
+      "price": 7.69,
+      "isAvailable": true,
       "productImg": "http://localhost:4200/assets/s4.jpg",
-    "rating": 1,
-    "review": 100,
-    "venderName": "OPJ shop",
-    "waranty": 1
+      "rating": 1,
+      "review": 100,
+      "venderName": "OPJ shop",
+      "waranty": 1
     },
     {
-    "id": "5",
-    "productName": "Formal shirt",
+      "id": "5",
+      "productName": "Formal shirt",
       "categoryId": 5,
-    "description": "descriptoin fiive for shirt ",
-    "price": 8.5,
-    "isAvailable":true,
+      "description": "descriptoin fiive for shirt ",
+      "price": 8.5,
+      "isAvailable": true,
       "productImg": "http://localhost:4200/assets/s5.jpg",
-    "rating": 1,
-    "review": 100,
-    "venderName": "OPJ shop",
-    "waranty": 1
+      "rating": 1,
+      "review": 100,
+      "venderName": "OPJ shop",
+      "waranty": 1
+    },
+    {
+      "id": "110",
+      "categoryId": "6",
+      "productName": "Mobile",
+      "description": "Samsung Glaxy Note 12",
+      "price": "1000",
+      "productImg": "",
+      "isAvailable": true,
+      "color": "gray",
+      "reviews": "6"
+    },
+    {
+      "id": "111",
+      "categoryId": "6",
+      "productName": "Mobile",
+      "description": "Iphone pro 6 128G 4 cpu\n",
+      "rating": "3",
+      "price": "1000",
+      "productImg": "",
+      "isAvailable": true,
+      "color": "blue",
+      "reviews": "6"
     }
   ],
-  "categories":[
-    {"id": 1,"categoryName": "Electronics"},
-    {"id": 2,"categoryName": "Men"},
-    {"id": 3,"categoryName": "Women"},
-    {"id": 4,"categoryName": "Homes and Furnituries"},
-    {"id": 5,"categoryName": "Baby & Kids"},
-    {"id": 6,"categoryName": "Computer & acceorities"}
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Electronics"
+    },
+    {
+      "id": 2,
+      "categoryName": "Men"
+    },
+    {
+      "id": 3,
+      "categoryName": "Women"
+    },
+    {
+      "id": 4,
+      "categoryName": "Homes and Furnituries"
+    },
+    {
+      "id": 5,
+      "categoryName": "Baby & Kids"
+    },
+    {
+      "id": 6,
+      "categoryName": "Computer & acceorities"
+    }
   ],
   "comments": [
     {

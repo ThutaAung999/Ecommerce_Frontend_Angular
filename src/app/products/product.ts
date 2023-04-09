@@ -7,9 +7,9 @@ export interface Product {
   price:number;
   productImg:string;
   isAvailable:boolean;
-  //color:string;
-  review:number;
-  venderName:string;
-  waranty:number;
+  color:string;
+  reviews:number;
+  /*venderName:string;*/
+  /*waranty:number;*/
 
 }

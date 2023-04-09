@@ -10,6 +10,9 @@ import { ViewAllProductComponent } from './view-all-product/view-all-product.com
 import { ViewProductComponent } from './view-product/view-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import {FormsModule} from "@angular/forms";
+
+
 
 
 
@@ -29,7 +32,9 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    FormsModule,
+
   ]
 })
 export class ProductsModule { }
