@@ -36,11 +36,13 @@ export class ProductService {
   }
 
 
+
+
   viewProductById(productId:string):Observable<Product>
   {
     console.log('productId inside service:',productId)//OK
     //const baseUrl="http://localhost:3000/products?productId="+productId;
-    const baseUrl="http://localhost:3000/products?productId="+productId;
+    const baseUrl="http://localhost:3000/products/"+productId;
     this.httpClient.get<Product>(baseUrl).subscribe(product=>{
       console.log('product.productName inside service',product.productName)
     });//No OK  , return  undefined ,

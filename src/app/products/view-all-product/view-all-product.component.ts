@@ -18,6 +18,10 @@ export class ViewAllProductComponent implements  OnInit{
     this.productService.viewAllProduct().subscribe(products=>{
       this.productList=products;
       console.log(' productList  :',this.productList)
+      console.log(' productList[0]  :',this.productList[0])
+
     });
+
+
   }
 }

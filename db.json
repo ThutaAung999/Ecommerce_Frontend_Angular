@@ -9,7 +9,7 @@
 
   "products": [
     {
-      "productId": "1",
+      "id": "1",
       "productName": "Party wear shirt",
       "categoryId": 1,
       "description": "descriptoin first for shirt",
@@ -22,7 +22,7 @@
       "waranty": 1
     },
     {
-      "productId": "2",
+      "id": "2",
       "productName": "Casual Shirt",
       "categoryId": 2,
       "description": "descriptoin second for shirt ",
@@ -35,7 +35,7 @@
       "waranty": 1
     },
     {
-      "productId": "3",
+      "id": "3",
       "productName": "Formal shirt",
       "categoryId": 2,
       "description": "descriptoin third for shirt ",
@@ -48,7 +48,7 @@
       "waranty": 1
     },
     {
-    "productId": "4",
+    "id": "4",
     "productName": "Formal shirt",
     "categoryId": 3,
     "description": "descriptoin four for shirt ",
@@ -61,7 +61,7 @@
     "waranty": 1
     },
     {
-    "productId": "5",
+    "id": "5",
     "productName": "Formal shirt",
       "categoryId": 5,
     "description": "descriptoin fiive for shirt ",
