@@ -94,6 +94,18 @@
       "isAvailable": true,
       "color": "blue",
       "reviews": "6"
+    },
+    {
+      "id": "115",
+      "productName": "Laptop",
+      "categoryId": "6",
+      "description": "fdfdfddfdfdfdfd",
+      "price": null,
+      "rating": "2",
+      "productImg": null,
+      "isAvailable": "1",
+      "color": "red",
+      "reviews": "3"
     }
   ],
   "categories": [

@@ -7,6 +7,7 @@ import {OrdersModule} from "./orders/orders.module";
 import {ProductsModule} from "./products/products.module";
 import {SiteLayoutModule} from "./site-layout/site-layout.module";
 import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 
     OrdersModule,
     SiteLayoutModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],

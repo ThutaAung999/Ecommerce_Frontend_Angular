@@ -1,15 +1,18 @@
+<!--This is two way data binding
+
+
 <br>
 <br>
 <hr>
 
 <h2 class="bg-light mb-2 my-5 text-center">Add  New  Product</h2>
 
-<!--<ng-template #template>-->
+
 
 <form (submit)="addNewProduct(addProductForm)"  #addProductForm="ngForm">
-<!--<form class="row g-3">-->
+
   <div class="row">
-  <!--<div class="col-md-4">-->
+
     <div class="col-md-6 mb-3">
     <label for="validationServer01" class="form-label">Product Name</label>
     <input type="text" class="form-control is-valid" id="validationServer01"
@@ -87,3 +90,170 @@
 </form>
 <br>
 <hr>
+
+
+-->
+
+<!--This is one way data binding-->
+
+
+<button type="button" class="btn btn-primary" (click)="newProductClick()">New Product</button>
+
+<ng-template #template>
+  <form [formGroup]="productForm" (ngSubmit)="saveOrUpdateProduct()">
+
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">
+        {{this.editMode?'Edit Product':'New Product'}}
+      </h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close"
+              (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <label for="productId" class="form-label">Product Id</label>
+          <input type="text" class="form-control is-valid" id="productId"
+                 required name="product_id" formControlName="id">
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <label for="productName" class="form-label">Product Name</label>
+          <input type="text" class="form-control is-valid" id="productName"
+                  required name="product_name" formControlName="productName">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="categoryId" class="form-label">Category Id</label>
+          <input type="text" class="form-control is-valid" id="categoryId"
+                 name="product_category" required formControlName="categoryId">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="description">Description</label>
+          <textarea name="product_description" id="description"
+                    required placeholder="Enter product description"  cols="100" rows="3"
+                    formControlName="description">
+      </textarea>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Rating</label>
+          <select name="product_rating" class="form-select" required formControlName="rating">
+            <option selected value="">Choose....</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="productName">Product color</label>
+          <input type="text" class="form-control"
+                 name="product_color"
+                 formControlName="color">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="categoryId">Is Available</label>
+          <select name="isAavailable" class="form-select" required
+                  formControlName="isAvailable">
+            <option selected value="">Choose...</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="productName">Price</label>
+          <input type="text" class="form-control"
+                 name="product_price" required formControlName="price">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="categoryId">Reviews</label>
+          <select name="reviews" class="form-select" formControlName="reviews">
+            <option selected value="">Choose....</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+          </select>
+        </div>
+      </div>
+
+
+      </div>
+  <!--modal-body-->
+
+
+    <div class="modal-footer">
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary"
+                style="margin-right:10px;"
+          >
+
+          {{this.editMode?'Update':'Save'}}
+        </button>
+        <button type="button" class="btn btn-primary"
+                (click)="closeProductModal()"
+        >Close</button>
+      </div>
+    </div>
+
+  </form>
+</ng-template>
+
+<!--
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Director</th>
+    <th>Year</th>
+    <th>Action</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let  product  of  products, index as i">
+    <td>{{product.pro}}</td>
+    <td>{{product.director}}</td>
+    <td>{{product.year}}</td>
+    <td>
+      <button type="button"
+              class="btn btn-outline-primary"
+              (click)="this.editBtnClick(i)">Edit</button>
+      <button type="button" class="btn btn-outline-danger"
+              (click)="this.btnDeleteproductClick(i)"> Delete</button>
+
+    </td>
+
+  </tr>
+  </tbody>
+</table>
+
+-->

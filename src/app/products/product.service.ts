@@ -3,15 +3,24 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from 'rxjs';
 import {Product} from "./product";
 import {Category} from "../site-layout/Category";
+import {BehaviorSubject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
+/*
+  _productArr:Array<Product>=[];
+  _products = new BehaviorSubject<Product[]>([]);
+  readonly products=this._products.asObservable();
+
+  json-server သုံးလို့ မလိုဘူးထင်တာပဲ။
+*/
 
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) {
+  }
 
   createProduct(productBody:Product):Observable<Product>{
     const baseUrl="http://localhost:3000/products";
@@ -36,30 +45,10 @@ export class ProductService {
   }
 
 
-
-
-  viewProductById(productId:string):Observable<Product>
-  {
-    console.log('productId inside service:',productId)//OK
-    //const baseUrl="http://localhost:3000/products?productId="+productId;
+  viewProductById(productId:string):Observable<Product> {
     const baseUrl="http://localhost:3000/products/"+productId;
-    this.httpClient.get<Product>(baseUrl).subscribe(product=>{
-      console.log('product.productName inside service',product.productName)
-    });//No OK  , return  undefined ,
     return this.httpClient.get<Product>(baseUrl);
   }
-
-  //searchCategoryProduct(categoryId:Category):Observable<Product[]>{
-  test(productId:string):Observable<Product>{
-    console.log("Inside product.service.ts ",productId )
-    const baseUrl="http://localhost:3000/products?productId="+productId;
-
-    /*this.httpClient.get<Product[]>(baseUrl).subscribe(prods=>{
-        console.log("product by category :",prods[0].productName)
-    });*/
-    return this.httpClient.get<Product>(baseUrl);
-  }
-
 
   //searchCategoryProduct(categoryId:Category):Observable<Product[]>{
   searchCategoryProduct(categoryId:string):Observable<Product[]>{
@@ -80,7 +69,7 @@ export class ProductService {
   getCategory(){
     const categoryUrl="http://localhost:3000/categories";
 
-    /*this.httpClient.get<Category[]>(categoryUrl).subscribe(categories=>{
+      /*this.httpClient.get<Category[]>(categoryUrl).subscribe(categories=>{
       console.log(categories[0].categoryName);
     });*/
     return  this.httpClient.get<Category[]>(categoryUrl);

@@ -10,7 +10,8 @@ import { ViewAllProductComponent } from './view-all-product/view-all-product.com
 import { ViewProductComponent } from './view-product/view-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ModalModule} from "ngx-bootstrap/modal";
 
 
 
@@ -34,6 +35,8 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     ProductsRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
 
   ]
 })
