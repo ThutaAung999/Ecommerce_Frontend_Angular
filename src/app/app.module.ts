@@ -8,6 +8,9 @@ import {ProductsModule} from "./products/products.module";
 import {SiteLayoutModule} from "./site-layout/site-layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ReactiveFormsModule} from "@angular/forms";
+import {ModalModule} from "ngx-bootstrap/modal";
+
 
 
 @NgModule({
@@ -21,12 +24,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
 
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
 
     OrdersModule,
     SiteLayoutModule,
     BrowserAnimationsModule,
 
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

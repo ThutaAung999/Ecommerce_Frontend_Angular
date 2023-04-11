@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {AddProductComponent} from "./add-product/add-product.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -10,15 +12,19 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AddProductComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AddProductComponent,
+
   ]
 
 })

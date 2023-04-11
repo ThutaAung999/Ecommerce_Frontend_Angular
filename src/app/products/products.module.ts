@@ -31,6 +31,9 @@ import {ModalModule} from "ngx-bootstrap/modal";
 
 
   ],
+  exports: [
+    AddProductComponent,
+  ],
   imports: [
     CommonModule,
     ProductsRoutingModule,

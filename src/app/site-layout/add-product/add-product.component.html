@@ -91,13 +91,20 @@
 <br>
 <hr>
 
-့
+
 -->
 
 <!--This is one way data binding-->
 
-<!--
-<button type="button" class="btn btn-primary" (click)="newProductClick()">New Product</button>
+
+
+<!--<button type="button" class="btn btn-primary" (click)="newMovieClick()">New Movie</button>-->
+
+<a routerLink="/side-layout/add-product"
+   class="list-group-item border-0   mx-3 p-3"  style="background-color: #eeffee"
+   (click)="newProductClick()">
+  <h4>Add new product</h4>
+</a>
 
 <ng-template #template>
   <form [formGroup]="productForm" (ngSubmit)="saveOrUpdateProduct()">
@@ -204,12 +211,10 @@
       </div>
 
 
-      </div>-->
-
+      </div>
   <!--modal-body-->
 
 
-<!--
     <div class="modal-footer">
 
       <div class="mb-3">
@@ -227,11 +232,6 @@
 
   </form>
 </ng-template>
--->
-
-
-
-
 
 <!--
 
@@ -264,4 +264,3 @@
 </table>
 
 -->
-Hello

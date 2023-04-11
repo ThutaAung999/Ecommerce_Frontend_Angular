@@ -1,0 +1,18 @@
+textarea{
+  max-width: 100%;
+  max-height: 150px;
+/*  border: none;*/
+  outline: none;
+  /*background: none;*/
+
+  border-bottom: 2px #fff solid;
+  color: blue;
+  margin: 10px 0;
+}
+
+form{
+  padding: 10px;
+  background-color: lightgray;
+  overflow : hidden;
+  border-radius: 10px;
+}
